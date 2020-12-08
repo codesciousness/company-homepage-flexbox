@@ -1,0 +1,55 @@
+.header {
+    background-color: $main-bg-color;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2rem 0;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 60%);
+}
+
+.header__h1 {
+    @extend %flex-center, %clip-text;
+    font-family: $title-font;
+    font-size: 10vw;
+    text-transform: uppercase;
+    background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    position: relative;
+    z-index: 1;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+    }
+
+    &::before {
+        height: 100%;
+        width: 100%;
+        background-image: inherit;
+        z-index: -2;
+    }
+
+    &::after {
+        height: 80%;
+        width: 97%;
+        position: absolute;
+        background-color: #000;
+        z-index: -1;
+    }
+}
+
+.header__h1--frontDisplay {
+    color: #eee;
+    position: absolute;
+    font-family: $title-font;
+    font-size: 9.5vw;
+    text-transform: uppercase;
+    background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+}

@@ -1,0 +1,29 @@
+@import "helpers/variables";
+@import "helpers/placeholders";
+@import "helpers/mixins";
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "components/forms";
+@import "components/buttons";
+
+@font-face {
+    font-family: Luxia;
+    src: url(../fonts/Luxia/Luxia-Semi-BoldDisplay.otf) format('opentype');
+}
+
+@font-face {
+    font-family: Hal;
+    src: url(../fonts/Hal/Hal.ttf) format('truetype');
+}
+
+/* Universal Styles*/
+
+* , *::before, *::after {
+    @extend %normalize;
+    box-sizing: border-box;
+}
+
+body {
+    color: #000;
+}
