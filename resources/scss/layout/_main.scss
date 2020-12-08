@@ -1,0 +1,5 @@
+.main__row {
+    @extend %flex-center;
+    font-family: $subtitle-font;
+    font-size: 3rem;
+}

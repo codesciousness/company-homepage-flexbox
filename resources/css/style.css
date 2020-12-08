@@ -11,7 +11,7 @@
   padding: 0;
 }
 
-.header__h1 {
+.header, .main__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,74 +23,54 @@
           align-items: center;
 }
 
-.header__h1 {
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-text-fill-color: transparent;
-}
-
 .header {
-  background-color: #f0f1ff;
   height: 60vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding: 2rem 0;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 60%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 60%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 65%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 65%);
 }
 
-.header__h1 {
-  font-family: Luxia, sans-serif;
-  font-size: 10vw;
-  text-transform: uppercase;
-  background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
-  background-position: 50% 50%;
-  background-size: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.header__h1::before, .header__h1::after {
+.header::before, .header::after {
   content: '';
   position: absolute;
 }
 
-.header__h1::before {
+.header::before {
   height: 100%;
   width: 100%;
-  background-image: inherit;
+  background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
+  background-position: 50% 50%;
+  background-size: 100%;
   z-index: -2;
 }
 
-.header__h1::after {
-  height: 80%;
+.header::after {
+  height: 54vh;
   width: 97%;
   position: absolute;
   background-color: #000;
   z-index: -1;
 }
 
-.header__h1--frontDisplay {
-  color: #eee;
-  position: absolute;
+.header__h1 {
+  color: #fff;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  text-align: center;
   font-family: Luxia, sans-serif;
-  font-size: 9.5vw;
+  font-size: 10vw;
   text-transform: uppercase;
+  line-height: 50vh;
   background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  z-index: 1;
+}
+
+.main__row {
+  font-family: Hal, sans-serif;
+  font-size: 3rem;
 }
 
 @font-face {
@@ -101,6 +81,11 @@
 @font-face {
   font-family: Hal;
   src: url(../fonts/Hal/Hal.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: Ikaros;
+  src: url(../fonts/Ikaros/Ikaros.ttf) format("truetype");
 }
 
 /* Universal Styles*/
