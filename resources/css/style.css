@@ -68,11 +68,33 @@
   -webkit-text-fill-color: transparent;
 }
 
-.main__row {
+.main__h2 {
   font-family: Hal, sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
+  margin-bottom: 5%;
 }
 
+.main__projects {
+  margin: 0 10px;
+  width: 6%;
+  min-width: 6%;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-transition: width 0.5s ease-in-out 0.1s;
+  transition: width 0.5s ease-in-out 0.1s;
+}
+
+.main__projects:hover {
+  width: 350px;
+}
+
+.main__images {
+  width: auto;
+  height: 525px;
+  display: block;
+}
+
+/* Fonts */
 @font-face {
   font-family: Luxia;
   src: url(../fonts/Luxia/Luxia-Semi-BoldDisplay.otf) format("opentype");
@@ -88,10 +110,14 @@
   src: url(../fonts/Ikaros/Ikaros.ttf) format("truetype");
 }
 
-/* Universal Styles*/
+/* Universal Styles */
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+html {
+  font-size: 2vmin;
 }
 
 body {

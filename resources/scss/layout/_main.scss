@@ -1,5 +1,28 @@
 .main__row {
     @extend %flex-center;
+}
+
+.main__h2 {
     font-family: $subtitle-font;
-    font-size: 3rem;
+    font-size: 4rem;
+    margin-bottom: 5%;
+}
+
+.main__projects {
+    margin: 0 10px;
+    width: 6%;
+    min-width: 6%;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out 0.1s;
+
+    &:hover {
+        width: 350px;
+    }
+}
+
+.main__images {
+    width: auto;
+    height: 525px;
+    display: block;
 }
