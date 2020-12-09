@@ -2,19 +2,20 @@
 
 $main-bg-color: #f0f1ff; /* rgb(240, 241, 255) */
 $secondary-bg-color-1: #edeefc; /* rgb(237, 238, 252) */
-$main-color: #222;
-$secondary-color-1: #00d6b4;
+$main-color: #111; /* rgb(17, 17, 17) */
+$main-inverse-color: #eee; /* rgb(238, 238, 238) */
+$secondary-color-1: #5284da;
 
 /* Font Properties */
 
 $title-font: Luxia, sans-serif;
 $subtitle-font: Hal, sans-serif;
-$main-font: Ikaros, sans-serif;
+$main-font: 'Raleway', sans-serif;
 $main-font-size: 2vmin;
 
 /* Borders */
 
-$main-border: 1px solid $secondary-color-1;
+$main-border: 1px solid $main-color;
 $border-radius-xs: 3px;
 $border-radius-sm: 5px;
 $border-radius-lg: 10px;
@@ -26,5 +27,5 @@ $secondary-box-shadow-1: 5px 5px 20px black;
 
 /* Transitions */
 
-$button-transitions: all 0.2s ease-in 0.1s;
+$button-transitions: all 0.5s cubic-bezier(0.75, 0, 0.175, 1);
 $nav-transitions: all 0.75s ease-in-out 0.1s;

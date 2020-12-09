@@ -1,11 +1,19 @@
 .main__row {
     @extend %flex-center;
+    margin-bottom: 5%;
 }
 
 .main__h2 {
     font-family: $subtitle-font;
     font-size: 4rem;
-    margin-bottom: 5%;
+    letter-spacing: 0.25rem;
+    &.-inverse {
+        color: $main-inverse-color;
+    }
+}
+
+#featured {
+    padding-bottom: 2rem;
 }
 
 .main__projects {
@@ -21,8 +29,123 @@
     }
 }
 
-.main__images {
+.main__featured {
     width: auto;
     height: 525px;
     display: block;
+}
+
+#latest {
+    flex-direction: column;
+    background-color: $main-color;
+    padding-top: 2rem;
+    > * {
+        margin: 2rem 0;
+    }
+}
+
+.main__slideContainer {
+    width: 1000px;
+    height: 666px;
+    position: relative;
+}
+
+.main__slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: url(#svgPath);
+    display: none;
+}
+
+.main__dots {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: $main-bg-color;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    &.-active {
+        background-color: rgba(240, 241, 255, 0.3);
+    }
+  }
+
+/*.main__svgContainer {
+    display: inline-block;
+	position: relative;
+    width: 100%;
+    height: 500px;
+	padding-bottom: 50%;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.main__svg {
+    display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}*/
+
+#contact {
+    flex-direction: column;
+    align-content: space-between;
+    background-color: $main-bg-color;
+    padding: 2rem 0;
+    > * {
+        margin: 1rem 0;
+    }
+}
+
+.main__button {
+    font-family: $main-font;
+    font-size: 1.5rem;
+    position: relative;
+    padding: 1rem;
+    cursor: pointer;
+    outline: none;
+    color: $secondary-color-1;
+    background: none;
+    transition: $button-transitions;
+    z-index: 1;
+
+    &:hover {
+        color: $main-inverse-color;
+	    transition-delay: 0.5s;
+    }
+
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 0;
+	    height: 100%;
+	    transition: inherit;
+        z-index: -1;
+    }
+
+    &::before {
+        right: 0;
+	    border: $main-border;
+	    border-left: 0;
+	    border-right: 0;
+    }
+
+    &::after {
+        left: 0;
+    }
+
+    &:hover::before, &:hover::after {
+        width: 100%;
+    }
+
+    &:hover::before {
+        transition-delay: 0s;
+    }
+
+    &:hover::after {
+        background: $main-color;
+	    transition-delay: 0.35s;
+    }
 }

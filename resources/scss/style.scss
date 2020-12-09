@@ -19,11 +19,6 @@
     src: url(../fonts/Hal/Hal.ttf) format('truetype');
 }
 
-@font-face {
-    font-family: Ikaros;
-    src: url(../fonts/Ikaros/Ikaros.ttf) format('truetype');
-}
-
 /* Universal Styles */
 
 * , *::before, *::after {
@@ -36,5 +31,7 @@ html {
 }
 
 body {
-    color: #000;
+    color: $main-color;
+    font-family: $main-font;
+    font-size: 1.5rem;
 }
