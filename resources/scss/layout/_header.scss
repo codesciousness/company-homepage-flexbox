@@ -2,6 +2,8 @@
     @extend %flex-center;
     height: 60vh;
     clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 65%);
+    color: $main-inverse-color;
+    text-align: center;
 
     &::before, &::after {
         content: '';
@@ -26,14 +28,31 @@
     }
 }
 
+.header__content {
+    align-self: flex-start;
+    margin: 2rem auto;
+}
+
+.header__span {
+    display: inline-block;
+    margin: 1rem 4rem;
+}
+
+.header__a {
+    color: $main-inverse-color;
+    text-decoration: none;
+
+    &:hover {
+        color: gray;
+    }
+}
+
 .header__h1 {
     color: #fff;
-    align-self: flex-start;
     text-align: center;
     font-family: $title-font;
     font-size: 10vw;
     text-transform: uppercase;
-    line-height: 50vh;
     background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
     background-position: 50% 50%;
     background-size: 100%;

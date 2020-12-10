@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Architecture Firm</title>
+        <title> X Architects</title>
+        <link rel="icon" href="resources/images/favicon.ico" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
         <link href="resources/css/style.css" rel="stylesheet" type="text/css">
@@ -12,7 +13,15 @@
     </head>
     <body>
         <header class="header">
-            <h1 class="header__h1">X Architects</h1>
+            <div class="header__content">
+                <h1 class="header__h1">X Architects</h1>
+                <nav class="header__nav">
+                    <span class="header__span"><a href="#featured" class="header__a">Featured Work</a></span>
+                    <span class="header__span"><a href="#latest" class="header__a">Latest Projects</a></span>
+                    <span class="header__span"><a href="#team" class="header__a">Our Team</a></span>
+                    <span class="header__span"><a href="#contact" class="header__a">Contact Us</a></span>
+                </nav>
+            </div>
         </header>
         <main class="main">
             <section id="featured" class="main__row">
@@ -120,8 +129,15 @@
                 <button class="main__button">Get a quote</button>
             </section>
         </main>
-        <footer>
-
+        <footer class="footer">
+            <nav class="footer__nav">
+                <span class="footer__span"><a href="#featured" class="footer__a">Featured Work</a></span>
+                <span class="footer__span"><a href="#latest" class="footer__a">Latest Projects</a></span>
+                <span class="footer__span"><a href="#team" class="footer__a">Our Team</a></span>
+                <span class="footer__span"><a href="#contact" class="footer__a">Contact Us</a></span>
+            </nav>
+            <p><i class="fab fa-facebook-square fa-2x"></i><i class="fab fa-twitter-square fa-2x"></i><i class="fab fa-pinterest-square fa-2x"></i><i class="fab fa-instagram-square fa-2x"></i></p>
+            <p>&copy; 2020 <span class="footer__brand">X</span> Architects</p>
         </footer>
     </body>
 </html>

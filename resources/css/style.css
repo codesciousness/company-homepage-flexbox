@@ -13,7 +13,7 @@
   padding: 0;
 }
 
-.header, .main__row, .main__projectContainer, .main__carousel {
+.header, .main__row, .main__projectContainer, .main__carousel, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,6 +29,8 @@
   height: 60vh;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 65%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 65%);
+  color: #eee;
+  text-align: center;
 }
 
 .header::before, .header::after {
@@ -53,15 +55,32 @@
   z-index: -1;
 }
 
-.header__h1 {
-  color: #fff;
+.header__content {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  margin: 2rem auto;
+}
+
+.header__span {
+  display: inline-block;
+  margin: 1rem 4rem;
+}
+
+.header__a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.header__a:hover {
+  color: gray;
+}
+
+.header__h1 {
+  color: #fff;
   text-align: center;
   font-family: Luxia, sans-serif;
   font-size: 10vw;
   text-transform: uppercase;
-  line-height: 50vh;
   background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
   background-position: 50% 50%;
   background-size: 100%;
@@ -273,11 +292,48 @@
   margin: 2rem 0;
 }
 
+.footer {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #eee;
+  background: black;
+  padding: 2rem 0;
+}
+
+.footer > * {
+  margin: 1rem 0;
+}
+
+.footer .fab {
+  margin: 0 3rem;
+  cursor: pointer;
+}
+
+.footer__span {
+  display: inline-block;
+  margin: 1rem 4rem;
+}
+
+.footer__a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer__a:hover {
+  color: gray;
+}
+
+.footer__brand {
+  font-family: Luxia, sans-serif;
+}
+
 .main__button {
   font-family: "Raleway", sans-serif;
   font-size: 1.5rem;
   position: relative;
-  padding: 1rem;
+  padding: 20px;
   cursor: pointer;
   outline: none;
   color: #5284da;
