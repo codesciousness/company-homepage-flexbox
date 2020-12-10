@@ -19,4 +19,29 @@ const showSlides = () => {
     setTimeout(showSlides, 5000);
 }
 
-window.onload = showSlides();
+window.onload = showSlides;
+
+const carousel = document.querySelector('.main__carousel')
+const prevButton = document.querySelector('.fa-chevron-left');
+const nextButton = document.querySelector('.fa-chevron-right');
+const radius = 250;
+const theta = 90;
+let selectedIndex = 0;
+
+const rotateCarousel = () => {
+  let angle = theta * selectedIndex * -1;
+  carousel.style.transform = `translateZ(-${radius}px) rotateY(${angle}deg)`;
+}
+
+const previous = () => {
+  selectedIndex--;
+  rotateCarousel();
+}
+
+const next = () => {
+  selectedIndex++;
+  rotateCarousel();
+}
+
+prevButton.onclick = previous;
+nextButton.onclick = next;
