@@ -49,3 +49,19 @@
 	    transition-delay: 0.35s;
     }
 }
+
+/* Media Queries */
+
+@media only screen and (max-width: 500px) {
+
+    .main__button {
+        font-size: 2.5rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .main__button {
+        font-size: 3rem;
+    }
+}

@@ -6,6 +6,7 @@
     font-family: $subtitle-font;
     font-size: 4rem;
     letter-spacing: 0.25rem;
+    text-align: center;
 
     &.-inverse {
         color: $main-inverse-color;
@@ -37,10 +38,10 @@
 
 .main__projects {
     margin: 0 10px;
-    width: 6%;
+    width: 100px;
     border-radius: $border-radius-sm;
     overflow: hidden;
-    transition: width 0.5s ease-in-out 0.1s;
+    transition: all 0.5s ease-in-out 0.1s;
 
     &:hover {
         width: 350px;
@@ -89,24 +90,7 @@
     &.-active {
         background-color: rgba(240, 241, 255, 0.3);
     }
-  }
-
-/*.main__svgContainer {
-    display: inline-block;
-	position: relative;
-    width: 100%;
-    height: 500px;
-	padding-bottom: 50%;
-	vertical-align: middle;
-	overflow: hidden;
 }
-
-.main__svg {
-    display: inline-block;
-	position: absolute;
-	top: 0;
-	left: 0;
-}*/
 
 #team {
     flex-direction: column;
@@ -183,5 +167,105 @@
     
     > * {
         margin: 2rem 0;
+    }
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+
+    #featured .main__p {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .main__slideContainer {
+        width: 500px;
+        height: 333px;
+    }
+
+    .main__slides {
+        clip-path: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .main__projectContainer {
+        flex-wrap: wrap;
+    }
+
+    .main__projects {
+        margin: 10px;
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .main__projectContainer {
+        flex-direction: column;
+    }
+
+    .main__projects {
+        height: 200px;
+
+        &:hover {
+            height: 525px;
+        }
+    }
+    
+    .main__featured {
+        width: 350px;
+        height: auto;
+        display: block;
+    }
+
+    #contact .main__p {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .main__slideContainer {
+        width: 250px;
+        height: 166.5px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .main__h2 {
+        font-size: 5rem;
+    }
+
+    .main__p {
+        font-size: 3rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .main__projects {
+        width: 90%;
+        height: auto;
+        margin: 3%;
+
+        &:hover {
+            pointer-events: none;
+        }
+    }
+
+    .main__featured {
+        width: 100%;
+        height: auto;
+    }
+
+    #featured .main__p {
+        width: 90%;
     }
 }

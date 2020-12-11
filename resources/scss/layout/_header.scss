@@ -33,6 +33,20 @@
     margin: 2rem auto;
 }
 
+.header__h1 {
+    color: #fff;
+    text-align: center;
+    font-family: $title-font;
+    font-size: 10vw;
+    text-transform: uppercase;
+    background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 .header__span {
     display: inline-block;
     margin: 1rem 4rem;
@@ -47,16 +61,106 @@
     }
 }
 
-.header__h1 {
-    color: #fff;
-    text-align: center;
-    font-family: $title-font;
-    font-size: 10vw;
-    text-transform: uppercase;
-    background: url(../images/pierre-axel-cotteret-X1tKQSMRlM0-unsplash.jpg) no-repeat;
-    background-position: 50% 50%;
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+
+    .header {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 65%);
+    }
+
+    .header__content {
+        margin: 4.5rem auto;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .header__h1 {
+        font-size: 11vw;
+    }
+
+    .header__span {
+        margin: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    .header__span {
+        margin: 1rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+
+    .header {
+        height: 50vh;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 95%, 0% 75%);
+    }
+
+    .header::before {
+        display: none;
+    }
+
+    .header::after {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .header__content {
+        margin: 6rem auto;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .header__content {
+        margin: 8rem auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .header {
+        height: 35vh;
+    }
+
+    .header::after {
+        height: 35vh;
+    }
+
+    .header__h1 {
+        font-size: 12vw;
+    }
+
+    .header__span, .header__a {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .header {
+        height: 30vh;
+    }
+
+    .header::after {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 335px) {
+
+    .header {
+        height: 20vh;
+    }
+
+    .header::after {
+        height: 20vh;
+    }
+
+    .header__content {
+        align-self: center;
+    }
 }
